@@ -1,0 +1,16 @@
+# to fix long loading on localhost
+
+echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_queued_events && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_instances && watchman shutdown-server
+
+# using icon
+
+1. npm install react-native-vector-icons --save 2. react-native link 3. react-native link react-native-vector-icons 4. import Icon using one of these ( as per your requirement )
+    import Icon from 'react-native-vector-icons/Ionicons';
+
+2. Uses (JSX)
+     <Icon size={24} color="white" name="movie" />
+
+# multi page
+
+npm install react-native-screens react-native-safe-area-context
+import { NavigationContainer } from '@react-navigation/native';
